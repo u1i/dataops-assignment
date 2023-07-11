@@ -1,0 +1,44 @@
+swagger: "2.0"
+info:
+  title: Production Line Monitoring API
+  version: 1.0.0
+basePath: /api/v1
+schemes:
+  - http
+consumes:
+  - application/json
+produces:
+  - application/json
+
+paths:
+  /production-line/start:
+    post:
+      summary: Initiates the production process on the manufacturing line
+      operationId: startProductionLine
+      parameters:
+        - name: body
+          in: body
+          description: Request payload for starting the production line
+          required: true
+          schema:
+            $ref: "#/definitions/StartProductionLineRequest"
+      responses:
+        200:
+          description: Production line successfully started
+        400:
+          description: Invalid request payload
+        500:
+          description: Internal server error
+
+definitions:
+  StartProductionLineRequest:
+    type: object
+    properties:
+      productId:
+        type: string
+        description: ID of the product to be manufactured
+      quantity:
+        type: integer
+        description: Number of units to be produced
+        minimum: 1
+        maximum: 10000
