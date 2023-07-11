@@ -41,6 +41,7 @@ The Manufacturing Line API is a mock API that allows the initiation of the produ
    - Using a scripting language or framework of your choice (e.g., Python with pytest), design and execute unit tests to validate the contract compliance of the Manufacturing Line API.
    - Focus on scenarios such as valid and invalid payloads, edge cases, and data type validation.
    - Demonstrate the ability to test the API endpoints and assert the expected responses based on the contract.
+   - The file testcases.md gives a couple of examples, you are free to use those or create your own.
 
 5. Automation Integration:
    - Showcase how the unit tests can be integrated into an overall testing framework for automation purposes.
